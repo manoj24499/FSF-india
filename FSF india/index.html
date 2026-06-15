@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Road to Spain – India Edition 2026 | Futbol Sin Fronteras</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        :root {
+            --c-orange: #fb7e25;
+            --c-blue: #006498;
+            --c-blue-dk: #004d76;
+            --c-blue-lt: #e6f3f9;
+            --c-orange-lt: #fff4ec;
+            --c-ink: #0d1a24;
+            --c-snow: #f8fafc;
+            --c-mist: #eef5fa;
+            --c-text: #1a2e3b;
+            --c-muted: #5a7a8e;
+
+            --f-display: 'Bebas Neue', sans-serif;
+            --f-heading: 'Oswald', sans-serif;
+            --f-body: 'Inter', sans-serif;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--f-body);
+            background: var(--c-snow);
+            color: var(--c-text);
+            overflow-x: hidden;
+            margin: 0;
+        }
+
+        /* ── NAVBAR ── */
+        .site-nav {
+            background: var(--c-blue-dk);
+            padding: 13px 0;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            border-bottom: 3px solid var(--c-orange);
+        }
+
+        .site-nav .brand {
+            font-family: var(--f-heading);
+            color: var(--c-orange);
+            font-size: 1.1rem;
+            letter-spacing: 0.06em;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .site-nav .nav-link {
+            color: rgba(255, 255, 255, 0.72);
+            font-family: var(--f-heading);
+            font-size: 0.82rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-weight: 500;
+            padding: 4px 13px !important;
+            transition: color 0.2s;
+        }
+
+        .site-nav .nav-link:hover {
+            color: var(--c-orange);
+        }
+
+        .btn-register-nav {
+            background: var(--c-orange) !important;
+            color: #fff !important;
+            border-radius: 3px;
+            font-weight: 700 !important;
+            font-size: 0.82rem !important;
+            padding: 6px 18px !important;
+            transition: background 0.2s;
+        }
+
+        .btn-register-nav:hover {
+            background: #e06b15 !important;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            background: var(--c-blue-dk);
+            position: relative;
+            overflow: hidden;
+            min-height: 92vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('https://images.unsplash.com/photo-1551280857-2b9bbe52acf4?w=1400&q=80');
+            background-size: cover;
+            background-position: center 30%;
+            opacity: 0.18;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(105deg, rgba(0, 77, 118, 0.97) 50%, rgba(0, 77, 118, 0.6) 100%);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: var(--c-snow);
+            clip-path: polygon(0 100%, 100% 0, 100% 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 80px 0 120px;
+        }
+
+        .hero-eyebrow {
+            font-family: var(--f-heading);
+            font-size: 0.78rem;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--c-orange);
+            font-weight: 600;
+        }
+
+        .hero-title {
+            font-family: var(--f-display);
+            font-size: clamp(4.5rem, 12vw, 9.5rem);
+            line-height: 0.88;
+            color: #fff;
+            letter-spacing: 0.01em;
+            margin: 0;
+        }
+
+        .hero-title .accent {
+            color: var(--c-orange);
+        }
+
+        .hero-subtitle {
+            font-family: var(--f-heading);
+            font-size: clamp(0.9rem, 2vw, 1.25rem);
+            color: rgba(255, 255, 255, 0.55);
+            font-weight: 400;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .hero-tagline {
+            font-family: var(--f-heading);
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 400;
+        }
+
+        .hero-tagline strong {
+            color: var(--c-orange);
+            font-weight: 700;
+        }
+
+        .btn-cta-primary {
+            background: var(--c-orange);
+            color: #fff;
+            font-family: var(--f-heading);
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 3px;
+            padding: 14px 36px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.2s, transform 0.15s;
+        }
+
+        .btn-cta-primary:hover {
+            background: #e06b15;
+            transform: translateY(-2px);
+            color: #fff;
+        }
+
+        .btn-cta-outline {
+            background: transparent;
+            color: #fff;
+            font-family: var(--f-heading);
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 3px;
+            padding: 12px 32px;
+            text-decoration: none;
+            display: inline-block;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .btn-cta-outline:hover {
+            border-color: var(--c-orange);
+            color: var(--c-orange);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 48px;
+            padding-top: 36px;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .stat-num {
+            font-family: var(--f-display);
+            font-size: 2.8rem;
+            color: var(--c-orange);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-family: var(--f-heading);
+            font-size: 0.72rem;
+            color: rgba(255, 255, 255, 0.45);
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            margin-top: 2px;
+        }
+
+        /* ── SECTION BASE ── */
+        .section {
+            padding: 84px 0;
+        }
+
+        .section-alt {
+            background: var(--c-mist);
+        }
+
+        .section-eyebrow {
+            font-family: var(--f-heading);
+            font-size: 0.73rem;
+            letter-spacing: 0.26em;
+            text-transform: uppercase;
+            color: var(--c-orange);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-family: var(--f-display);
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            color: var(--c-blue-dk);
+            line-height: 0.95;
+            letter-spacing: 0.02em;
+        }
+
+        .section-body {
+            font-size: 1.02rem;
+            color: var(--c-muted);
+            line-height: 1.78;
+            max-width: 540px;
+        }
+
+        .divider-orange {
+            width: 44px;
+            height: 3px;
+            background: var(--c-orange);
+            margin-bottom: 22px;
+        }
+
+        /* ── ABOUT ── */
+        .about-img-wrap {
+            border-radius: 6px;
+            overflow: hidden;
+            height: 420px;
+            position: relative;
+        }
+
+        .about-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .about-img-badge {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: var(--c-orange);
+            color: #fff;
+            font-family: var(--f-heading);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 8px 16px;
+            border-radius: 3px;
+        }
+
+        /* ── HIGHLIGHTS ── */
+        .highlight-card {
+            background: #fff;
+            border-radius: 5px;
+            padding: 26px 22px;
+            border-top: 4px solid var(--c-orange);
+            box-shadow: 0 2px 14px rgba(0, 100, 152, 0.07);
+            height: 100%;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 28px rgba(0, 100, 152, 0.13);
+        }
+
+        .highlight-icon {
+            font-size: 1.7rem;
+            margin-bottom: 10px;
+        }
+
+        .highlight-label {
+            font-family: var(--f-heading);
+            font-size: 0.78rem;
+            color: var(--c-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .highlight-value {
+            font-family: var(--f-display);
+            font-size: 1.65rem;
+            color: var(--c-blue);
+            line-height: 1.1;
+            margin-top: 4px;
+        }
+
+        /* ── STEPS ── */
+        .step-card {
+            background: #fff;
+            border-radius: 5px;
+            padding: 30px 24px;
+            box-shadow: 0 2px 12px rgba(0, 100, 152, 0.07);
+            position: relative;
+            height: 100%;
+        }
+
+        .step-num {
+            font-family: var(--f-display);
+            font-size: 3.5rem;
+            color: var(--c-blue-lt);
+            line-height: 1;
+            position: absolute;
+            top: 14px;
+            right: 18px;
+        }
+
+        .step-tag {
+            display: inline-block;
+            background: var(--c-blue);
+            color: #fff;
+            font-family: var(--f-heading);
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 3px 10px;
+            border-radius: 2px;
+            margin-bottom: 12px;
+        }
+
+        .step-title {
+            font-family: var(--f-heading);
+            font-size: 1.1rem;
+            color: var(--c-blue-dk);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .step-desc {
+            font-size: 0.88rem;
+            color: var(--c-muted);
+            margin-top: 6px;
+            line-height: 1.6;
+        }
+
+        .step-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--c-orange);
+            font-size: 1.4rem;
+        }
+
+        .step-card.step-final {
+            background: var(--c-blue-dk);
+            border-top: 4px solid var(--c-orange);
+        }
+
+        .step-card.step-final .step-num {
+            color: rgba(255, 255, 255, 0.07);
+        }
+
+        .step-card.step-final .step-title {
+            color: #fff;
+        }
+
+        .step-card.step-final .step-desc {
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        .step-card.step-final .step-tag {
+            background: var(--c-orange);
+            color: #fff;
+        }
+
+        /* ── BENEFITS (dark band) ── */
+        .benefits-section {
+            background: var(--c-blue-dk);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefits-section::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: var(--c-snow);
+            clip-path: polygon(0 0, 100% 100%, 0 100%);
+        }
+
+        .benefits-section::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: var(--c-mist);
+            clip-path: polygon(100% 0, 100% 100%, 0 100%);
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .benefit-item:last-child {
+            border-bottom: none;
+        }
+
+        .benefit-icon {
+            width: 42px;
+            height: 42px;
+            background: rgba(251, 126, 37, 0.12);
+            border: 1px solid rgba(251, 126, 37, 0.3);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .benefit-text {
+            font-family: var(--f-heading);
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.82);
+            font-weight: 500;
+            line-height: 1.4;
+            padding-top: 8px;
+        }
+
+        /* Image collage in benefits */
+        .img-collage {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 220px 220px;
+            gap: 10px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .img-collage img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .img-collage .img-tall {
+            grid-row: span 2;
+        }
+
+        /* ── CITIES ── */
+        .cities-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .cities-table thead th {
+            background: var(--c-blue);
+            color: #fff;
+            font-family: var(--f-heading);
+            font-size: 0.73rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            padding: 14px 20px;
+        }
+
+        .cities-table tbody tr {
+            border-bottom: 1px solid var(--c-mist);
+            transition: background 0.15s;
+        }
+
+        .cities-table tbody tr:hover {
+            background: var(--c-blue-lt);
+        }
+
+        .cities-table tbody td {
+            padding: 15px 20px;
+            font-family: var(--f-heading);
+            font-size: 0.98rem;
+            color: var(--c-text);
+            font-weight: 500;
+        }
+
+        .cities-table tbody td:last-child {
+            color: var(--c-blue);
+            font-weight: 700;
+        }
+
+        .city-badge {
+            display: inline-block;
+            background: var(--c-orange);
+            color: #fff;
+            font-size: 0.66rem;
+            font-family: var(--f-heading);
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 2px 8px;
+            border-radius: 2px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        .camp-banner {
+            background: var(--c-orange);
+            border-radius: 5px;
+            padding: 36px 32px;
+            color: #fff;
+        }
+
+        .camp-banner .camp-label {
+            font-family: var(--f-heading);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.7;
+        }
+
+        .camp-banner .camp-value {
+            font-family: var(--f-display);
+            font-size: 1.9rem;
+            line-height: 1.1;
+            margin-top: 4px;
+        }
+
+        /* ── REGISTRATION ── */
+        .reg-card {
+            background: var(--c-blue-dk);
+            border-radius: 6px;
+            padding: 44px 40px;
+            color: #fff;
+        }
+
+        .reg-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 13px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .reg-row:last-child {
+            border-bottom: none;
+        }
+
+        .reg-item-label {
+            font-family: var(--f-heading);
+            font-size: 0.78rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.42);
+        }
+
+        .reg-item-value {
+            font-family: var(--f-heading);
+            font-size: 1.02rem;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        /* Price block */
+        .price-block {
+            display: flex;
+            align-items: flex-end;
+            gap: 16px;
+            margin-bottom: 28px;
+            flex-wrap: wrap;
+        }
+
+        .price-original {
+            font-family: var(--f-display);
+            font-size: 2.5rem;
+            color: rgba(255, 255, 255, 0.3);
+            text-decoration: line-through;
+            line-height: 1;
+        }
+
+        .price-final {
+            font-family: var(--f-display);
+            font-size: 4.5rem;
+            color: var(--c-orange);
+            line-height: 1;
+        }
+
+        .price-badge {
+            background: var(--c-orange);
+            color: #fff;
+            font-family: var(--f-heading);
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 3px;
+            margin-bottom: 8px;
+            align-self: flex-start;
+        }
+
+        /* ── CONTACT ── */
+        .contact-wrap {
+            background: #fff;
+            border-radius: 6px;
+            padding: 36px 32px;
+            box-shadow: 0 2px 20px rgba(0, 100, 152, 0.08);
+        }
+
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--c-mist);
+        }
+
+        .contact-row:last-child {
+            border-bottom: none;
+        }
+
+        .contact-icon {
+            width: 42px;
+            height: 42px;
+            background: var(--c-blue-lt);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .contact-type {
+            font-family: var(--f-heading);
+            font-size: 0.68rem;
+            color: var(--c-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            font-weight: 600;
+        }
+
+        .contact-val {
+            font-family: var(--f-heading);
+            font-size: 0.95rem;
+            color: var(--c-blue-dk);
+            font-weight: 600;
+            margin-top: 1px;
+        }
+
+        .qr-placeholder {
+            width: 150px;
+            height: 150px;
+            background: var(--c-blue-lt);
+            border: 2px dashed var(--c-blue);
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: var(--c-blue);
+            font-family: var(--f-heading);
+            font-size: 0.68rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        /* ── IMAGE SECTION ── */
+        .img-strip {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 10px;
+            height: 320px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .img-strip img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ── FOOTER ── */
+        .site-footer {
+            background: var(--c-ink);
+            color: rgba(255, 255, 255, 0.4);
+            padding: 32px 0;
+            font-family: var(--f-heading);
+            font-size: 0.78rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .site-footer .brand-name {
+            color: var(--c-orange);
+            font-weight: 700;
+        }
+
+        @media (max-width: 767px) {
+            .hero-content {
+                padding: 60px 0 100px;
+            }
+
+            .hero-stats {
+                gap: 22px;
+            }
+
+            .img-strip {
+                grid-template-columns: 1fr;
+                height: auto;
+            }
+
+            .img-strip img {
+                height: 200px;
+            }
+
+            .img-collage {
+                grid-template-rows: 170px 170px;
+            }
+
+            .reg-card {
+                padding: 28px 22px;
+            }
+
+            .contact-wrap {
+                padding: 24px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="site-nav">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                <a href="#" class="brand">FSF · Road to Spain</a>
+                <div class="d-flex align-items-center gap-1 flex-wrap">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#how" class="nav-link">Selection</a>
+                    <a href="#cities" class="nav-link">Cities</a>
+                    <a href="#register" class="nav-link">Register</a>
+                    <a href="#register" class="nav-link btn-register-nav ms-2">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="row">
+                <div class="col-lg-9">
+                    <p class="hero-eyebrow mb-3">Futbol Sin Fronteras · India Edition 2026</p>
+                    <h1 class="hero-title mb-2">
+                        Road<br>to <span class="accent">Spain</span>
+                    </h1>
+                    <p class="hero-subtitle mb-4">National Football Talent Identification Program</p>
+                    <p class="hero-tagline mb-5">
+                        Train. Compete. Get Scouted.<br>
+                        <strong>Earn Your Chance to Play in Spain.</strong>
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#register" class="btn-cta-primary">Register Now — ₹3,000</a>
+                        <a href="#how" class="btn-cta-outline">How It Works</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-num">7</div>
+                            <div class="stat-label">Trial Cities</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">200</div>
+                            <div class="stat-label">Players Per City</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">15</div>
+                            <div class="stat-label">Travel to Spain</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">9–11</div>
+                            <div class="stat-label">Age Group (Yrs)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5">
+                    <div class="about-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1614632537190-23e4e3c2c24d?w=700&q=80"
+                            alt="Young footballers training" />
+                        <div class="about-img-badge">⚽ Reyes Cup · Spain 2026</div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <p class="section-eyebrow">About the Program</p>
+                    <div class="divider-orange"></div>
+                    <h2 class="section-title mb-4">Discover.<br>Develop.<br>Represent.</h2>
+                    <p class="section-body">
+                        Road to Spain – India Edition 2026 is a national football talent identification program designed
+                        to discover young football talent from across India and provide an international football
+                        exposure opportunity in Spain.
+                    </p>
+                    <p class="section-body mt-3">
+                        Trials are conducted across seven cities. Selected players advance to the National Final Camp in
+                        Coimbatore, where the final 15 will travel to Spain and compete in the prestigious <strong>Reyes
+                            Cup</strong>.
+                    </p>
+
+                    <div class="row g-3 mt-3">
+                        <div class="col-6 col-sm-3">
+                            <div class="highlight-card">
+                                <div class="highlight-icon">🏆</div>
+                                <div class="highlight-label">Tournament</div>
+                                <div class="highlight-value">Reyes Cup</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-3">
+                            <div class="highlight-card">
+                                <div class="highlight-icon">✈️</div>
+                                <div class="highlight-label">Destination</div>
+                                <div class="highlight-value">Spain</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-3">
+                            <div class="highlight-card">
+                                <div class="highlight-icon">🏟️</div>
+                                <div class="highlight-label">Final Camp</div>
+                                <div class="highlight-value">Coimbatore</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-3">
+                            <div class="highlight-card">
+                                <div class="highlight-icon">👁️</div>
+                                <div class="highlight-label">Scouts</div>
+                                <div class="highlight-value">Int'l</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMAGE STRIP -->
+    <div class="container pb-5">
+        <div class="img-strip">
+            <img src="https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?w=800&q=80" alt="Football action" />
+            <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=500&q=80"
+                alt="Kids playing football" />
+            <img src="https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?w=500&q=80" alt="Football training" />
+        </div>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <section class="section section-alt" id="how">
+        <div class="container">
+            <div class="text-center mb-5">
+                <p class="section-eyebrow">The Selection Process</p>
+                <div class="divider-orange mx-auto"></div>
+                <h2 class="section-title">How Selection Works</h2>
+            </div>
+            <div class="row g-3 align-items-stretch">
+                <div class="col-12 col-md">
+                    <div class="step-card">
+                        <span class="step-num">01</span>
+                        <div class="step-tag">Step 1</div>
+                        <div class="step-title">City Trials</div>
+                        <p class="step-desc">200 players compete at each of the 7 trial cities across India.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-auto d-none d-md-flex step-arrow align-items-center">→</div>
+                <div class="col-12 col-md">
+                    <div class="step-card">
+                        <span class="step-num">02</span>
+                        <div class="step-tag">Step 2</div>
+                        <div class="step-title">City Selection</div>
+                        <p class="step-desc">15 players selected from each location — 105 total advance.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-auto d-none d-md-flex step-arrow align-items-center">→</div>
+                <div class="col-12 col-md">
+                    <div class="step-card">
+                        <span class="step-num">03</span>
+                        <div class="step-tag">Step 3</div>
+                        <div class="step-title">National Final Camp</div>
+                        <p class="step-desc">5-day elite evaluation camp in Coimbatore, Aug 19–23, 2026.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-auto d-none d-md-flex step-arrow align-items-center">→</div>
+                <div class="col-12 col-md">
+                    <div class="step-card">
+                        <span class="step-num">04</span>
+                        <div class="step-tag">Step 4</div>
+                        <div class="step-title">Final 15 Selected</div>
+                        <p class="step-desc">15 players chosen to represent India and travel to Spain.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-auto d-none d-md-flex step-arrow align-items-center">→</div>
+                <div class="col-12 col-md">
+                    <div class="step-card step-final">
+                        <span class="step-num">05</span>
+                        <div class="step-tag">Spain</div>
+                        <div class="step-title">Spain Experience</div>
+                        <p class="step-desc">Training, international matches & the Reyes Cup.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="section benefits-section py-0" id="benefits">
+        <div class="container" style="padding-top:100px;padding-bottom:100px;">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-4">
+                    <p class="section-eyebrow" style="color:var(--c-orange);">What You Receive</p>
+                    <div class="divider-orange"></div>
+                    <h2 class="section-title" style="color:#fff;">Everything Covered. Nothing Left Behind.</h2>
+                    <p class="mt-3" style="color:rgba(255,255,255,0.55);font-size:1rem;line-height:1.75;">
+                        Selected players receive a fully-funded international football experience — flights, stays,
+                        food, transport, training, and exposure to international scouts.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">✈️</div>
+                        <div class="benefit-text">Fully-funded trip to Spain — flights & accommodation included</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🏆</div>
+                        <div class="benefit-text">International tournament participation in the Reyes Cup</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">⚽</div>
+                        <div class="benefit-text">Professional football training sessions in Spain</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🍽️</div>
+                        <div class="benefit-text">Food and local transportation fully provided</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">👁️</div>
+                        <div class="benefit-text">Exposure to international scouts and football professionals</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🗺️</div>
+                        <div class="benefit-text">Guided football experience in Spain from arrival to return</div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="img-collage">
+                        <img class="img-tall"
+                            src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&q=80"
+                            alt="Football" />
+                        <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=400&q=80"
+                            alt="Stadium" />
+                        <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=400&q=80"
+                            alt="Football training" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CITIES -->
+    <section class="section section-alt" id="cities">
+        <div class="container">
+            <div class="row g-5 align-items-start">
+                <div class="col-lg-4">
+                    <p class="section-eyebrow">Trial Schedule</p>
+                    <div class="divider-orange"></div>
+                    <h2 class="section-title mb-3">7 Cities.<br>One Dream.</h2>
+                    <p class="section-body">Trials run July–August 2026 across India. Find your city, show up, and earn
+                        your shot.</p>
+                    <div class="camp-banner mt-4">
+                        <div class="camp-label">National Final Camp</div>
+                        <div class="camp-value">Coimbatore, Tamil Nadu</div>
+                        <div class="camp-label mt-3">Dates</div>
+                        <div class="camp-value">19–23 August 2026</div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="bg-white rounded overflow-hidden shadow-sm">
+                        <table class="cities-table">
+                            <thead>
+                                <tr>
+                                    <th>City</th>
+                                    <th>Trial Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Kolkata</td>
+                                    <td>11 July 2026</td>
+                                </tr>
+                                <tr>
+                                    <td>Guwahati</td>
+                                    <td>12 July 2026</td>
+                                </tr>
+                                <tr>
+                                    <td>Mumbai</td>
+                                    <td>18 July 2026</td>
+                                </tr>
+                                <tr>
+                                    <td>Goa <span style="opacity:.55;font-size:.85rem;font-weight:400">(Benaulim)</span>
+                                    </td>
+                                    <td>19 July 2026</td>
+                                </tr>
+                                <tr>
+                                    <td>Bengaluru</td>
+                                    <td>25 July 2026</td>
+                                </tr>
+                                <tr>
+                                    <td>Malappuram</td>
+                                    <td>26 July 2026</td>
+                                </tr>
+                                <tr>
+                                    <td>Coimbatore <span class="city-badge">Final City</span></td>
+                                    <td>1 August 2026</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="mt-3"
+                        style="font-size:.83rem;color:var(--c-muted);font-family:var(--f-heading);letter-spacing:.05em;">
+                        ⚠️ Limited to 200 players per city — register early to secure your spot.
+                    </p>
+                    <div class="mt-4">
+                        <img src="https://images.unsplash.com/photo-1459865264687-595d652de67e?w=900&q=80"
+                            alt="Football stadium"
+                            style="width:100%;border-radius:5px;height:200px;object-fit:cover;object-position:center 60%;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REGISTER -->
+    <section class="section" id="register">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5">
+                    <p class="section-eyebrow">Registration</p>
+                    <div class="divider-orange"></div>
+                    <h2 class="section-title mb-3">Ready to Play?</h2>
+                    <p class="section-body">Secure your slot before spots fill up. Registration is open now for all
+                        seven trial cities across India.</p>
+                    <a href="#" class="btn-cta-primary mt-4 d-inline-block">Register Now</a>
+                </div>
+                <div class="col-lg-7">
+                    <div class="reg-card">
+                        <div class="price-block">
+                            <div>
+                                <div
+                                    style="font-family:var(--f-heading);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:4px;">
+                                    Registration Fee</div>
+                                <div class="price-original">₹10,000</div>
+                            </div>
+                            <div class="price-final">₹3,000</div>
+                            <div class="price-badge">70% OFF</div>
+                        </div>
+                        <div class="reg-row">
+                            <div class="reg-item-label">Age Group</div>
+                            <div class="reg-item-value">9–11 Years</div>
+                        </div>
+                        <div class="reg-row">
+                            <div class="reg-item-label">Slots Per City</div>
+                            <div class="reg-item-value">Limited to 200 Players</div>
+                        </div>
+                        <div class="reg-row">
+                            <div class="reg-item-label">Players Selected Per City</div>
+                            <div class="reg-item-value">15 Players</div>
+                        </div>
+                        <div class="reg-row">
+                            <div class="reg-item-label">Final Camp Location</div>
+                            <div class="reg-item-value">Coimbatore, Tamil Nadu</div>
+                        </div>
+                        <div class="mt-4">
+                            <a href="#" class="btn-cta-primary w-100 text-center">Secure Your Spot Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <div class="row g-5 align-items-start">
+                <div class="col-lg-4">
+                    <p class="section-eyebrow">Contact & Connect</p>
+                    <div class="divider-orange"></div>
+                    <h2 class="section-title mb-3">Get In Touch</h2>
+                    <p class="section-body">Have questions about trials, registration, or the program? We're here to
+                        help.</p>
+                    <div class="mt-4">
+                        <p
+                            style="font-family:var(--f-heading);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--c-muted);margin-bottom:4px;">
+                            Organised by</p>
+                        <p
+                            style="font-family:var(--f-display);font-size:2.2rem;color:var(--c-blue-dk);line-height:1.05;margin-bottom:6px;">
+                            Futbol Sin Fronteras</p>
+                        <p style="font-size:.9rem;color:var(--c-muted);">Creating international football opportunities
+                            for young Indian talent.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-wrap">
+                        <div class="contact-row">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <div class="contact-type">Phone</div>
+                                <div class="contact-val">_______________</div>
+                            </div>
+                        </div>
+                        <div class="contact-row">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <div class="contact-type">Email</div>
+                                <div class="contact-val">_______________</div>
+                            </div>
+                        </div>
+                        <div class="contact-row">
+                            <div class="contact-icon">📸</div>
+                            <div>
+                                <div class="contact-type">Instagram</div>
+                                <div class="contact-val">_______________</div>
+                            </div>
+                        </div>
+                        <div class="contact-row">
+                            <div class="contact-icon">🌐</div>
+                            <div>
+                                <div class="contact-type">Website</div>
+                                <div class="contact-val">_______________</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex flex-column align-items-center gap-3 pt-3">
+                    <div class="qr-placeholder">
+                        <span style="font-size:2.4rem;line-height:1.2;">◻◼◻<br>◼◻◼<br>◻◼◻</span>
+                        <span>Scan to Register</span>
+                    </div>
+                    <p
+                        style="font-family:var(--f-heading);font-size:.7rem;color:var(--c-muted);text-align:center;letter-spacing:.08em;text-transform:uppercase;">
+                        Replace with your QR code</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap gap-3">
+            <span><span class="brand-name">Futbol Sin Fronteras</span> · Road to Spain – India Edition 2026</span>
+            <span>Age 9–11 · 7 Cities · 1 Dream</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+            });
+        });
+    </script>
+</body>
+
+</html>
